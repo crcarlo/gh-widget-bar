@@ -3,7 +3,7 @@ function addCss() {
 	svg {
 		fill: white;
 	}
-	.ghwidgetbar {
+	.gh-widget-bar {
 		color: #666;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	}
@@ -24,11 +24,11 @@ function addCss() {
 		margin-left: 5px;
 		margin-top: -25px;
 	}
-	.ghwidgetbar a {
+	.gh-widget-bar a {
 		color: inherit;
 		text-decoration: none !important;
 	}
-	.ghwidgetbar h3 {
+	.gh-widget-bar h3 {
 		padding: 0px;
 		margin: 0px;
 	}
@@ -104,7 +104,7 @@ function addCss() {
 	var style_text_node = document.createTextNode(style_content);
 	var style_element = document.createElement("style");
 	style_element.appendChild(style_text_node);
-	document.getElementsByClassName("ghwidgetbar")[0].appendChild(style_element);
+	document.getElementsByClassName("gh-widget-bar")[0].appendChild(style_element);
 }
 
 function initializeWidgets() {
@@ -167,7 +167,7 @@ function initializeWidgets() {
 		</div>
 	</div>
 	`;
-	var wids = document.getElementsByClassName("ghwidgetbar");
+	var wids = document.getElementsByClassName("gh-widget-bar");
 	for (var i=0; i<wids.length; i++) {
 		wids[i].innerHTML = wid_html;
 	}
@@ -229,7 +229,7 @@ function start() {
 	initializeWidgets();
 	addCss();
 	// get users ids
-	var wids = document.getElementsByClassName("ghwidgetbar");
+	var wids = document.getElementsByClassName("gh-widget-bar");
 	var userids = [];
 	for (var i=0; i<wids.length; i++) {
 		userids.push(wids[i].getAttribute("gh-username"));
