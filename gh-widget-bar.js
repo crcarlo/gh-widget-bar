@@ -43,51 +43,48 @@ function addCss() {
 	.gh-wid-body > * {
 		margin: 5px;
 	}
-	#gh-link {
+	.gh-link {
+		font-size: 15;
 		float: left;
 		width: 23%;
 	}
-	#gh-wid-bio {
+	.gh-wid-bio {
 		float: left;
 		width: 30%;
 		margin-top: 10px;
 	}
-	#gh-stats {
+	.gh-stats {
 		float: left;
 		width: 38%;
 	}
-	#gh-wid-avatar img {
+	.gh-wid-avatar img {
 		border-radius: 4px;
 		width: 60px; 
 		height: 60px; 
 	}
-	#gh-link {
-		font-size: 15;
-		float: left;
-	}
-	#gh-wid-avatar {
+	.gh-wid-avatar {
 		float: left;
 		margin-bottom: 10px;
 	}
-	#gh-wid-name-box {
+	.gh-wid-name-box {
 		float: left;
 	}
-	#gh-wid-name {
+	.gh-wid-name {
 		color: #24292e;
 		font-weight: 600;
 	}
-	#gh-wid-avatar {
+	.gh-wid-avatar {
 		margin-right: 10px;
 	}
-	#gh-stats {
+	.gh-stats {
 		font-size: 13;
 	}
-	#gh-stats > * {
+	.gh-stats > * {
 		margin-right: 10px;
 		float: left;
 		width: 28%;
 	}
-	#gh-wid-bio {
+	.gh-wid-bio {
 		font-size: 13;
 	}
 	.gh-number {
@@ -118,49 +115,49 @@ function initializeWidgets() {
 		</div>
 	</div>
 	<div class="gh-wid-body">
-		<div id="gh-link">
+		<div class="gh-link">
 			<a href="#">
-				<div id="gh-wid-avatar">
+				<div class="gh-wid-avatar">
 					<img>
 				</div>
-				<div id="gh-wid-name-box">
+				<div class="gh-wid-name-box">
 					<h3>
-						<div id="gh-wid-name"></div>
+						<div class="gh-wid-name"></div>
 					</h3>
-					<div id="gh-wid-nick">
+					<div class="gh-wid-nick">
 						--
 					</div>
 				</div>
 			</a>
 		</div>
-		<div id="gh-wid-bio">
+		<div class="gh-wid-bio">
 			--
 		</div>
-		<div id="gh-stats">
+		<div class="gh-stats">
 			<div>
 				<a>
-					<div class="wid-num-title">
+					<div>
 						Repositories
 					</div>
-					<div class="gh-number" id="gh-repo">
+					<div class="gh-number gh-repo">
 					</div>
 				</a>
 			</div>
 			<div>
 				<a>
-					<div class="wid-num-title">
+					<div>
 						Followers
 					</div>
-					<div class="gh-number" id="gh-followers">
+					<div class="gh-number gh-followers">
 					</div>
 				</a>
 			</div>
 			<div>
 				<a>
-					<div class="wid-num-title">
+					<div>
 						Following
 					</div>
-					<div class="gh-number" id="gh-following">
+					<div class="gh-number gh-following">
 					</div>
 				</a>
 			</div>
@@ -179,18 +176,18 @@ function initializeWidgets() {
 function updateWidget(userid, name, nick, avatar, bio, repo, followers, following, link) {
 	var count = document.querySelectorAll('[gh-username="'+userid+'"]');
 	for (var i=0; i<count.length; i++) {
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-wid-avatar img')[i].setAttribute("src",avatar);
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-wid-name')[i].innerHTML = name;
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-wid-nick')[i].innerHTML = nick;
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-wid-bio')[i].innerHTML = bio;
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-repo')[i].innerHTML = repo;
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-followers')[i].innerHTML = followers;
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-following')[i].innerHTML = following;
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-wid-avatar img')[i].setAttribute("src",avatar);
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-wid-name')[i].innerHTML = name;
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-wid-nick')[i].innerHTML = nick;
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-wid-bio')[i].innerHTML = bio;
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-repo')[i].innerHTML = repo;
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-followers')[i].innerHTML = followers;
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-following')[i].innerHTML = following;
 		//make elements links
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-link a')[i].setAttribute("href",link);
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-wid-repo a')[i].setAttribute("href",link+"/?tab=repositories");
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-wid-followers a')[i].setAttribute("href",link+"/?tab=followers");
-		document.querySelectorAll('[gh-username="'+userid+'"] #gh-wid-following a')[i].setAttribute("href",link+"/?tab=following");
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-link a')[i].setAttribute("href",link);
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-wid-repo a')[i].setAttribute("href",link+"/?tab=repositories");
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-wid-followers a')[i].setAttribute("href",link+"/?tab=followers");
+		document.querySelectorAll('[gh-username="'+userid+'"] .gh-wid-following a')[i].setAttribute("href",link+"/?tab=following");
 	}
 }
 
