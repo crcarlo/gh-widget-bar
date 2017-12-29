@@ -7,18 +7,18 @@ function addCss() {
 		color: #666;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	}
-	#gh-wid-head {
+	.gh-wid-head {
 		padding: 5px;
 		color: white;
 		font-weight: 600;
 		background-color: rgb(36, 41, 46);
 		border-radius: 3px 3px 0px 0px;
 	}
-	#gh-logo {
+	.gh-wid-head .logo {
 		width: 24px;
 		display: inline-block;
 	}
-	#gh-title {
+	.gh-wid-head .title {
 		display: table-cell;
 		display: inline-block;
 		margin-left: 5px;
@@ -32,7 +32,7 @@ function addCss() {
 		padding: 0px;
 		margin: 0px;
 	}
-	#gh-wid-body {
+	.gh-wid-body {
 		border-color: #ccc;
 		border-style: solid;
 		border-width: 1px;
@@ -40,7 +40,7 @@ function addCss() {
 		padding: 5px;
 		overflow: auto;
 	}
-	#gh-wid-body > * {
+	.gh-wid-body > * {
 		margin: 5px;
 	}
 	#gh-link {
@@ -54,7 +54,7 @@ function addCss() {
 	}
 	#gh-stats {
 		float: left;
-		width: 38%
+		width: 38%;
 	}
 	#gh-wid-avatar img {
 		border-radius: 4px;
@@ -109,17 +109,17 @@ function addCss() {
 
 function initializeWidgets() {
 	var wid_html = `
-	<div id="gh-wid-head">
-		<div id="gh-logo">
+	<div class="gh-wid-head">
+		<div class="logo">
 			<svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
 		</div>
-		<div id="gh-title">
+		<div class="title">
 			GitHub
 		</div>
 	</div>
-	<div id="gh-wid-body">
+	<div class="gh-wid-body">
 		<div id="gh-link">
-			<a href="">
+			<a href="#">
 				<div id="gh-wid-avatar">
 					<img>
 				</div>
@@ -137,7 +137,7 @@ function initializeWidgets() {
 			--
 		</div>
 		<div id="gh-stats">
-			<div id="gh-wid-repo" class="gh-stat">
+			<div>
 				<a>
 					<div class="wid-num-title">
 						Repositories
@@ -146,7 +146,7 @@ function initializeWidgets() {
 					</div>
 				</a>
 			</div>
-			<div id="gh-wid-followers" class="gh-stat">
+			<div>
 				<a>
 					<div class="wid-num-title">
 						Followers
@@ -155,7 +155,7 @@ function initializeWidgets() {
 					</div>
 				</a>
 			</div>
-			<div id="gh-wid-following" class="gh-stat">
+			<div>
 				<a>
 					<div class="wid-num-title">
 						Following
