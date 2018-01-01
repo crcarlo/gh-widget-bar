@@ -38,7 +38,7 @@ function addCss() {
 		border-width: 1px;
 		border-radius: 0px 0px 3px 3px;
 		padding: 5px;
-		overflow: auto;
+		display: flex;
 	}
 	.gh-wid-body > * {
 		margin: 5px;
@@ -50,7 +50,7 @@ function addCss() {
 	}
 	.gh-wid-bio {
 		float: left;
-		width: 30%;
+		width: 35%;
 		margin-top: 10px;
 	}
 	.gh-stats {
@@ -78,6 +78,7 @@ function addCss() {
 	}
 	.gh-stats {
 		font-size: 13;
+		display: flex;
 	}
 	.gh-stats > * {
 		margin-right: 10px;
