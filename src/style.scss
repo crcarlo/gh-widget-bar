@@ -18,6 +18,7 @@
 	}
 
 	.gh-wid-head {
+		display: flex;
 		padding: 5px;
 		color: white;
 		font-weight: 600;
@@ -25,15 +26,11 @@
 		border-radius: 3px 3px 0px 0px;
 
 		.logo {
-			width: 50px;
 			display: inline-block;
 		}
 
-		.gh-wid-head .title {
-			display: table-cell;
-			display: inline-block;
-			margin-left: 5px;
-			margin-top: -25px;
+		.title {
+			margin-left: 8px;
 		}
 	}
 
@@ -44,11 +41,13 @@
 		border-radius: 0px 0px 3px 3px;
 		padding: 8px;
 		display: flex;
+		justify-content: space-between;
 
 		.gh-link {
 			font-size: 15;
 			float: left;
 			width: 23%;
+			min-width: 220px;
 
 			.gh-wid-avatar {
 				float: left;
@@ -84,17 +83,21 @@
 			font-size: 13;
 			display: flex;
 			justify-content: space-between;
+			max-width: 280px;
+
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
 
 			& > * {
-				text-align: center;
-				margin-right: 8px;
-				float: left;
+				@media (min-width: 601px) and (max-width: 767px) {
+					margin-bottom: 8px;
+				}
 
 				@media (max-width: 767px) {
-					margin-bottom: 10px;
-
 					a {
-						display: flex;
 						justify-content: space-between;
 						flex-direction: row;
 					}
@@ -109,16 +112,42 @@
 				font-weight: 600;
 				border-radius: 15px;
 				text-align: center;
+				margin-top: 7px;
 
 				span {
 					display: block;
-					margin-top: calc(50% - 8.5px);
+					padding-top: calc(50% - 8.5px);
+				}
+
+				@media (max-width: 767px) {
+					margin-top: 0;
 				}
 			}
 
-			@media (max-width: 767px) {
+			@media (min-width: 601px) and (max-width: 767px) {
 				flex-direction: column;
 				justify-content: unset;
+			}
+		}
+
+		@media (max-width: 600px) {
+			flex-wrap: wrap;
+
+			.gh-link {
+				width: 50%;
+			}
+
+			.gh-wid-bio {
+
+			}
+
+			.gh-stats {
+				width: 100%;
+				max-width: none;
+
+				.gh-number {
+					margin-left: 8px;
+				}
 			}
 		}
 	}
