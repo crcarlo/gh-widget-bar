@@ -1,0 +1,27 @@
+{
+  "name": "ghwidgetbar",
+  "version": "1.0.0",
+  "description": "A widget bar for showing and linking to a GitHub user profile",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crcarlo/gh-widget-bar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crcarlo/gh-widget-bar/issues"
+  },
+  "homepage": "https://github.com/crcarlo/gh-widget-bar#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-file-include": "^2.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
