@@ -37,7 +37,7 @@
 	.gh-wid-body {
 		border-color: #ccc;
 		border-style: solid;
-		border-width: 1px;
+		border-width: 0 1px 1px 1px;
 		border-radius: 0px 0px 3px 3px;
 		padding: 8px;
 		display: flex;
@@ -75,6 +75,10 @@
 			float: left;
 			width: 42%;
 			padding: 5px 8px 5px 8px;
+
+			@media (max-width: 480px) {
+				width: 100%;
+			}
 		}
 
 		.gh-stats {
@@ -138,7 +142,7 @@
 			}
 
 			.gh-wid-bio {
-
+				padding: 8px 0px 8px 0px;
 			}
 
 			.gh-stats {
