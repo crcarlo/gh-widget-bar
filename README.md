@@ -18,11 +18,11 @@ You might also want to insert more than one widget in a single page. For doing t
 This widget is meant to be an horizontal responsive bar. So it is recommended for it to take a good part of the horizontal space of the viewport.
 For viewports of 768px or less it is recommended to take all the available space instead.
 
-## For editors
+## For devs
 
 If you want to edit or customize this widget go on and fork this repository. Here's a basic guide on how to build this widget.
 
 - First install all node dependencies with `npm install`.
-- You can edit everything you want inside the `src` directory (HTML, SCSS, JS).
+- You can edit everything you want inside the `src` directory (html, sass, js).
 - Run `gulp build` for creating the widget.
 - You're done! You can find your built widget `buid/gh-widget-bar.js` and a minified version `buid/gh-widget-bar.min.js`
